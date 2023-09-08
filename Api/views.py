@@ -25,7 +25,7 @@ class CustomizedDataView(APIView):
 
                     # Cacheing the data for 1 minutes
                     cache.set(cache_temp, customized_data, 60)  
-                    print(cache.get(cache_temp))
+        
 
                     return Response(customized_data)
                 except requests.exceptions.RequestException as e:
